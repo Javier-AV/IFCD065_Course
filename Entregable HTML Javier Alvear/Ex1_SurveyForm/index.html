@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Form Exercise</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out this form with the required information.</p>
+
+    <form id="survey-form">
+      <!-- Camp del nom -->
+      <label id="name-label" for="name">Name:</label>
+      <input id="name" type="text" placeholder="Enter your name" required />
+
+      <!-- Camp de Email -->
+      <label id="email-label" for="email">Email:</label>
+      <input id="email" type="email" placeholder="Enter your email" required />
+
+      <!-- Camp número telefon -->
+      <label id="number-label" for="number">Telephone:</label>
+      <input id="number" type="number" min="0" max="9" placeholder="Enter a telephone number" required />
+
+      <!-- Placeholder pregunta amb Dropdown -->
+      <label for="dropdown">You think?</label>
+      <select id="dropdown" name="opinion">
+        <option value="">Choose an option...</option>
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+      </select>
+
+      <!-- Placeholder pregunta amb Radio Buttons -->
+      <fieldset>
+        <legend>Question:</legend>
+        <input type="radio" name="same-name" id="radio-1" value="option1" required>
+        <label for="radio-1">Option 1</label>
+
+        <input type="radio" name="same-name" id="radio-2" value="option2" required>
+        <label for="radio-2">Option 2</label>
+      </fieldset>
+
+      <!-- Placeholder pregunta amb Checkboxes -->
+      <fieldset>
+        <legend>Interests:</legend>
+        <input type="checkbox" name="interests" value="music" id="music">
+        <label for="music">Music</label>
+
+        <input type="checkbox" name="interests" value="sports" id="sports">
+        <label for="sports">Sports</label>
+
+        <input type="checkbox" name="interests" value="reading" id="reading">
+        <label for="reading">Reading</label>
+      </fieldset>
+
+      <!-- Zona comentaris addicionals -->
+      <label for="comments">Additional Comments:</label>
+      <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter your comments here..."></textarea>
+
+      <!-- Submit Button -->
+      <button id="submit" type="submit">Submit</button>
+    </form>
+  </main>
+</body>
+</html>
